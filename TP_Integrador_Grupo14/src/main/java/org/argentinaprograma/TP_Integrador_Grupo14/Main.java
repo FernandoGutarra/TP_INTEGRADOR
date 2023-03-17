@@ -24,9 +24,9 @@ public class Main {
 			String[][] contenedor1 = new String[2][4];
 			int i = 0;
 			
-			while((resultCSV = lector1.readNext()) != null) {
+			while((resultCSV = lector1.readNext()) != null ) {
 				resultados = resultCSV[0].split(";");
-						
+					System.out.println(resultados[0]);
 				contenedor1[i][0] = resultados[0];
 				contenedor1[i][1] = resultados[1];
 				contenedor1[i][2] = resultados[2];
