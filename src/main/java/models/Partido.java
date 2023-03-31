@@ -3,6 +3,8 @@ package models;
 import com.opencsv.bean.CsvBindByPosition;
 
 public class Partido {
+	@CsvBindByPosition(position = 0)
+	private String nro;
 	@CsvBindByPosition(position = 1)
 	private String equipo1;
 	@CsvBindByPosition(position = 4)
@@ -14,7 +16,12 @@ public class Partido {
 	public String getEquipo1() {
 		return equipo1;
 	}
-
+    public void setNro(String nro){
+		this.nro = nro;
+	}
+    public String getNro(){
+		return nro;
+	}
 	public void setEquipo1(String equipo1) {
 		this.equipo1 = equipo1;
 	}
