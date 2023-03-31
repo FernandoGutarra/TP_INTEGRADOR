@@ -21,8 +21,9 @@ public class Partido {
     public void setNro(String nro){
 		this.nro = nro;
 	}
-    public String getNro(){
-		return nro;
+    public int getNro(){
+		int ParseNro= Integer.parseInt(nro);
+		return ParseNro;
 	}
 	public void setEquipo1(String equipo1) {
 		this.equipo1 = equipo1;

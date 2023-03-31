@@ -1,10 +1,15 @@
 package models;
 
+import java.util.List;
+
 public class Ronda {
 
 	private int nro;
 	private Partido[] partidos;
-	
+	public Ronda (int nro, List<Partido> resultadoList){
+		this.nro=nro;
+		this.partidos= new Partido[resultadoList.size()];
+	}
 	public int getNro() {
 		return nro;
 	}
