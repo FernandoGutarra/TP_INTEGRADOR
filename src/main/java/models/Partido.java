@@ -2,6 +2,8 @@ package models;
 
 import com.opencsv.bean.CsvBindByPosition;
 
+import java.security.PublicKey;
+
 public class Partido {
 	@CsvBindByPosition(position = 0)
 	private String nro;
@@ -49,5 +51,10 @@ public class Partido {
 	public void setGolesEquipo2(String golesEquipo2) {
 		this.golesEquipo2 = golesEquipo2;
 	}
-	
+	public String Resultado(int golesEquipoX,int golesEquipo2){
+           ResultadoEnum resultadoEnum = new ResultadoEnum(golesEquipoX,golesEquipo2);
+	       String resultado = resultadoEnum.ResultadoGanador();
+       return resultado;
+	}
+
 }
