@@ -1,0 +1,7 @@
+models\ResultadoEnum.class
+models\LectorCsvResultados.class
+models\Partido.class
+models\Pronostico.class
+org\grupo14\Main.class
+models\Equipo.class
+models\Ronda.class
