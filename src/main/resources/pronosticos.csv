@@ -1,9 +1,9 @@
-﻿Ronda;Participante;Equipo;Gana1;Empata;Gana2;Equipo2
-1;Mariana;Argentina;X;;;Arabia Saudita
+Ronda;Participante;Equipo1;Gana1;Empata;Gana2;Equipo2
+1;Mariana;Argentina;X;;;ArabiaSaudita
 1;Mariana;Polonia;;X;;Mexico
 2;Mariana;Argentina;X;;;Mexico
-2;Mariana;Arabia Saudita;;;X;Polonia
-1;Pedro;Argentina;X;;;Arabia Saudita
+2;Mariana;ArabiaSaudita;;;X;Polonia
+1;Pedro;Argentina;X;;;ArabiaSaudita
 1;Pedro;Polonia;;;X;Mexico
 2;Pedro;Argentina;X;;;Mexico
-2;Pedro;Arabia Saudita;;X;;Polonia
+2;Pedro;ArabiaSaudita;;X;;Polonia
