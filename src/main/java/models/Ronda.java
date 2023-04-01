@@ -1,14 +1,12 @@
 package models;
 
-import java.util.List;
-
 public class Ronda {
 
 	private int nro;
 	private Partido[] partidos;
-	public Ronda (int nro, List<Partido> resultadoList){
+	public Ronda (int nro,int MAXPARTIDOS){
 		this.nro=nro;
-		this.partidos= new Partido[resultadoList.size()];
+		this.partidos= new Partido[MAXPARTIDOS];
 	}
 	public int getNro() {
 		return nro;
@@ -21,9 +19,7 @@ public class Ronda {
 	public Partido[] getPartidos() {
 		return partidos;
 	}
-	
-	public void setPartidos(Partido[] partidos) {
-		this.partidos = partidos;
-	}
-	
+
+
+
 }

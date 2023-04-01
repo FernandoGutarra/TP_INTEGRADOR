@@ -1,8 +1,5 @@
 package org.grupo14;
-import models.LectorCsvResultados;
-import models.Partido;
-import models.Pronostico;
-import models.Ronda;
+import models.*;
 
 import java.lang.module.ResolutionException;
 import java.util.ArrayList;
@@ -20,10 +17,10 @@ public class Main
     final static int CANTIDADMAXRONDAS=2;
 
 	public static void main(String[] args) {
-		LectorCsvResultados lectorCsvPartido = new LectorCsvResultados(RUTARESULTADOSCSV);
-        lectorCsvPartido.parsearArchivoResultado();
-		List<Partido> resultadoList = lectorCsvPartido.getLineasPartido();
-        for(Partido cadaResultado : resultadoList){
+		//LectorCsvResultados lectorCsvPartido = new LectorCsvResultados(RUTARESULTADOSCSV);
+        //lectorCsvPartido.parsearArchivoResultado();
+		//List<Partido> resultadoList = lectorCsvPartido.getLineasPartido();
+       /* for(Partido cadaResultado : resultadoList){
 			System.out.println(
 					"nro: " + cadaResultado.getNro() + "\n" +
 					"Equipo1: " +  cadaResultado.getEquipo1() + "\n" +
@@ -31,8 +28,24 @@ public class Main
 				    "GolesEquipo1: " +  cadaResultado.getGolesEquipo1()+ "\n" +
 			        "GolesEquipo2: " +  cadaResultado.getGolesEquipo2()+ "\n" +
 							"-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+");
+		} */
+
+		LectorCsvPronosticos lectorCsvPronosticos = new LectorCsvPronosticos(RUTAPRONOSTICOSCSV);
+		lectorCsvPronosticos.parsearArchivoPronostico();
+		List<Pronostico> pronosticosList = lectorCsvPronosticos.getLineasPronostico();
+		for(Pronostico cadaPronostico : pronosticosList){
+			System.out.println(
+					"Participante: " + cadaPronostico.getParticipante() + "\n" +
+							"Equipo1: " + cadaPronostico.getEquipo1() + "\n" +
+							"Equipo2: " + cadaPronostico.getEquipo2()+ "\n" +
+							"Gana1: " + cadaPronostico.getGana1() + "\n" +
+							"Gana2: " + cadaPronostico.getGana2() + "\n" +
+							"enpate: " + cadaPronostico.getEmpata() + "\n" +
+							"ronda: " + cadaPronostico.getRonda() + "\n" +
+							"-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+"
+			);
 		}
-		/*
+  /*
         String EquipoX = resultadoList.get(0).getEquipo1();
 		String Equipo2= resultadoList.get(0).getEquipo2();
 		String GolesEquipo1= resultadoList.get(0).getGolesEquipo1();
@@ -48,16 +61,7 @@ public class Main
 						"a el equipo: "+ Equipo2
 				);
 		*/
-		int resultadoIndex=0;
-		ArrayList<Partido>partidos=new ArrayList<>();;
-		while(resultadoList.get(resultadoIndex).getNro()<=CANTIDADMAXRONDAS){
-			int rondaNro=resultadoList.get(resultadoIndex).getNro();
-				Ronda ronda = new Ronda(rondaNro, resultadoList);
-              for(Partido partido:resultadoList){
-				  partido.getEquipo1();
-			}
-			resultadoIndex++;
-		}
+
 
 	}
 }

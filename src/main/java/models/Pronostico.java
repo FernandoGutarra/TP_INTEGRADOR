@@ -3,55 +3,81 @@ package models;
 import com.opencsv.bean.CsvBindByPosition;
 
 public class Pronostico {
-
 	@CsvBindByPosition(position = 0)
-	private String partido;
+	private String ronda;
+
 	@CsvBindByPosition(position = 1)
-	private String equipo;
+	private String participante;
+
 	@CsvBindByPosition(position = 2)
-	private String resultado;
-	public Pronostico(String partido, String equipo) {
-		this.setPartido(partido);
-		this.setEquipo(equipo);
-	}
-	
-/*	public int puntos() {
-		int puntaje = 0;
-		
-		String nombreGanador = partido.ganadorReal();
-		
-		if(nombreGanador.equals(this.getEquipo().getNombre())) {
-			puntaje++; 
-		}
-		
-		return puntaje;
-	}
-*/
-	public String getPartido() {
-		return partido;
+	private String equipo1;
+
+	@CsvBindByPosition(position = 3)
+	private String gana1;
+
+	@CsvBindByPosition(position = 4)
+	private String empata;
+
+	@CsvBindByPosition(position = 5)
+	private String gana2;
+
+	@CsvBindByPosition(position = 6)
+	private String equipo2;
+
+	public String getRonda() {
+		return ronda;
 	}
 
-	public void setPartido(String partido) {
-		this.partido = partido;
+	public void setRonda(String ronda) {
+		this.ronda = ronda;
 	}
 
-	public String getEquipo() {
-		return equipo;
+	public String getParticipante() {
+		return participante;
 	}
 
-	public void setEquipo(String equipo) {
-		this.equipo = equipo;
+	public void setParticipante(String participante) {
+		this.participante = participante;
 	}
 
-	/*
-	public ResultadoEnum getResultado() {
-		return resultado;
+	public String getEquipo1() {
+		return equipo1;
 	}
 
-	public void setResultado(ResultadoEnum resultado) {
-		this.resultado = resultado;
+	public void setEquipo1(String equipo1) {
+		this.equipo1 = equipo1;
 	}
-	 */
-	
+
+	public String getGana1() {
+		return gana1;
+	}
+
+	public void setGana1(String gana1) {
+		this.gana1 = gana1;
+	}
+
+	public String getEmpata() {
+		return empata;
+	}
+
+	public void setEmpata(String empata) {
+		this.empata = empata;
+	}
+
+	public String getGana2() {
+		return gana2;
+	}
+
+	public void setGana2(String gana2) {
+		this.gana2 = gana2;
+	}
+
+	public String getEquipo2() {
+		return equipo2;
+	}
+
+	public void setEquipo2(String equipo2) {
+		this.equipo2 = equipo2;
+	}
 }
 
